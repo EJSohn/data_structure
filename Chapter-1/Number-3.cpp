@@ -19,7 +19,7 @@ void fill(int start, int end, T value)
 }
 
 int main(){
-    fill(0, 5, 1.0);
+    fill(0, 5, 1.5);
 
     return 0;
 }
