@@ -6,7 +6,6 @@ template<class Ta, class Tb>
 int count(Ta& a, Tb value)
 {
     int arr_len = sizeof(a)/sizeof(a[0]);
-    if (arr_len < 1 ) throw "the array is empty";
     int cnt = 0;
 
     for(int i=0; i<arr_len; i++)
@@ -22,16 +21,10 @@ int count(Ta& a, Tb value)
 
 int main()
 {
-    float a[]= {};
+    float a[] = {2.0, 4.12, 5.98, 21.4, 2.0, 2.0};
     int value = 2;
-    
-    try { cout<<count(a, value)<<endl; }
-    catch ( char const*  e )
-    {
-        cout<<e<<endl;
-        return 1;
-    }
 
+    cout<<count(a, value)<<endl;
     return 0;
 }
 
