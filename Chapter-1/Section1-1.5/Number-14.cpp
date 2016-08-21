@@ -2,14 +2,16 @@
 using namespace std;
 
 template <class T>
-T ** changeLength2D(T ** &x,int oldLength, int newLength)
+T ** changeLength2D(T ** &x,int oldLength, int newLength, int numberOfColumns)
 {
     T ** newArray = new T * [newLength];
     for( int i=0; i<oldLength; i++)
     {
-        int numberOfColumns = sizeof(x[i])/sizeof(x[i][0]);
-        newArray[i] = new T [numberOfColumns];
-        newArray[i] = x[i];
+        // int numberOfColumns = sizeof(x[0])/sizeof(T); 
+        // this not working. why? x, x[0]'s value are 8 and never change.
+
+        newArray[i] = new T [numberOfColumns]; 
+        newArray[i] = x[i];  
         delete [] x[i];
     }
 
@@ -18,24 +20,24 @@ T ** changeLength2D(T ** &x,int oldLength, int newLength)
 
 int main()
 {
+    int numberOfColumns = 8;
     int** x = new int*[5];
     for (int i=0; i<5; i++)
     {
-        x[i] = new int[8];
-        for( int a=0; a<8; a++)
+        x[i] = new int[numberOfColumns];
+        for( int a=0; a<numberOfColumns; a++)
         {
             x[i][a] = a;
         }
     }
-
     try 
     { 
-        int ** newArray = changeLength2D(x, 5, 10); 
+        int ** newArray = changeLength2D(x, 5, 10, numberOfColumns); 
         for(int i=0; i<10; i++)
         {
             for(int a=0; a<8; a++)
             {
-                cout<<"newArray["<<i<<"]["<<a<<"] ="<<newArray[i][a]<<endl;
+                //cout<<"newArray["<<i<<"]["<<a<<"] ="<<newArray[i][a]<<endl;
             }
         } 
     }
