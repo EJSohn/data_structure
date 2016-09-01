@@ -5,13 +5,10 @@ using namespace std;
 
 int main()
 {
-    currency g, h(currency::plus, 3, 50), i, j;
+    currency g, h;
 
-    g.setValue(currency::minus, 2, 25);
-    i.setValue(-6.45);
-
-    j = h.add(g);
-    h.output();
+    g.input();
+    g.output();
     
     return 0;
 }

@@ -12,7 +12,7 @@ currency::currency(signType theSign, unsigned long theDollars,
 void currency::setValue(signType theSign, unsigned long theDollars, unsigned int theCents)
 {
     if (theCents > 99)
-        cout<<"error"<<endl;
+        throw "Cents should be < 100";
     sign = theSign;
     dollars = theDollars;
     cents = theCents;
@@ -60,9 +60,21 @@ void currency::output() const
     if (sign==minus) cout << '-';
     cout << '$' << dollars << '.';
     if (cents < 10) cout << '0';
-    cout << cents;
+    cout << cents <<endl;
 }
 
+// exercise 16-(a)
+void currency::input()
+{
+    double userValue;
+    
+    cout<<"please enter the currency value you want"<<endl;
+    cin>> userValue;
+    if (typeid(userValue)!=typeid(double))
+        throw "the input value must be double";
+    
+    setValue(userValue);
+}
 
 
 

@@ -14,6 +14,8 @@ class currency
         ~currency() {}
         void setValue(signType, unsigned long, unsigned int);
         void setValue(double);
+        // exercise 16-(a)
+        void input();
         signType getSign() const {return sign;}
         unsigned long getDollars() const {return dollars;}
         unsigned int getCents() const {return cents;}
