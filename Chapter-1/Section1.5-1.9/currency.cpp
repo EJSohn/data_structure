@@ -9,11 +9,10 @@ currency::currency(signType theSign, unsigned long theDollars,
     setValue(theSign, theDollars, theCents);
 }
 
-void currency::setValue(signType theSign, unsigned long theDollars,
-                                          unsigned int theCents)
+void currency::setValue(signType theSign, unsigned long theDollars, unsigned int theCents)
 {
     if (theCents > 99)
-        throw illegalParameterValue("Cents should be < 100");
+        cout<<"error"<<endl;
     sign = theSign;
     dollars = theDollars;
     cents = theCents;
