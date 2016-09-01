@@ -26,4 +26,39 @@ class currency
         unsigned int cents;
 };
 
+currency::currency(signType theSign, unsigned long theDollars,
+                                     unsigned int theCents)
+{
+    setValue(theSign, theDollars, theCents);
+}
+
+void currency::setValue(signType theSign, unsigned long theDollars,
+                                          unsigned int theCents)
+{
+    if (theCents > 99)
+        throw illegalParameterValue("Cents should be < 100");
+    sign = theSign;
+    dollars = theDollars;
+    cents = theCents;
+
+}
+
+void currency::setValue(double theAmount)
+{
+    if ( theAmount < 0 ) { sign = minus; 
+                           theAmount = -theAmount;}
+    else sign = plus;
+    
+    dollars = (unsigned long) theAmount;
+    cents = (unsigned int) ((theAmount + 0.001 - dollars)*100);
+}
+
+
+
+
+
+int main(){
+
+    return 0;
+}
 
