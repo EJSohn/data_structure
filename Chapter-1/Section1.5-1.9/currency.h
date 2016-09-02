@@ -20,6 +20,8 @@ class currency
         currency subtract(const currency&) const;
         // exercise 16-(c)
         currency percent(double) const;
+        // exercise 16-(d)
+        currency multiply(double) const;
         signType getSign() const {return sign;}
         unsigned long getDollars() const {return dollars;}
         unsigned int getCents() const {return cents;}

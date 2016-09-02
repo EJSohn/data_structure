@@ -32,9 +32,8 @@ void currency::setValue(double theAmount)
 // exercise 16-(c)
 currency currency::percent(double x) const
 {
-    if (x>=1)
-        throw "percent should be < 1";
-
+    if (x>=1||x<0)
+        throw "percent x should be 0<x<1";
     long a1, a2;
     currency result;
 
@@ -48,6 +47,24 @@ currency currency::percent(double x) const
     return result;
 }
 
+// exercise 16-(d)
+currency currency::multiply(double x) const
+{
+    if(x<1)
+        throw "use percent function";
+
+    long a1, a2;
+    currency result;
+
+    a1 = dollars * 100 + cents;
+    a2 = a1 * x;
+
+    if(sign==minus) {a2 = -a2; result.sign == minus; }
+    result.dollars = a2/100;
+    result.cents = (a2 - result.dollars * 100)/1;
+
+    return result;
+}
 
 currency currency::add(const currency& x) const
 {
