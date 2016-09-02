@@ -49,6 +49,27 @@ currency currency::add(const currency& x) const
     return result;
 }
 
+// exercise 16-(b)
+currency currency::subtract(const currency& x) const
+{
+    long a1, a2, a3;
+    currency result;
+
+    a1 = dollars * 100 + cents;
+    if (sign == minus) a1 = -a1;
+
+    a2 = x.dollars * 100 + x.cents;
+    if (sign == minus) a2 = -a2;
+
+    a3 = a1 - a2;
+
+    if(a3<0) {result.sign = minus; a3 = -a3;}
+    result.dollars = a3/100;
+    result.cents = a3 - result.dollars * 100;
+
+    return result;
+}
+
 currency& currency::increment(const currency& x)
 {
     *this = add(x);

@@ -16,6 +16,8 @@ class currency
         void setValue(double);
         // exercise 16-(a)
         void input();
+        // exercise 16-(b)
+        currency subtract(const currency&) const;
         signType getSign() const {return sign;}
         unsigned long getDollars() const {return dollars;}
         unsigned int getCents() const {return cents;}
