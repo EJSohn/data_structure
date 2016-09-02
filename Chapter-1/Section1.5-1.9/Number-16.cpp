@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    currency g, h, j;
+    currency g, h, j, i;
 
     // exercise 16-(a)
     g.input();
@@ -16,6 +16,10 @@ int main()
     j = h.subtract(g);
 
     j.output();
+
+    // exercise 16-(c)
+    i = g.percent(0.50);
+    i.output();
     
     return 0;
 }
