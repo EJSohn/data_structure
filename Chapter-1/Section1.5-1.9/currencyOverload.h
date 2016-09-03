@@ -1,6 +1,6 @@
 class currency
 {
-    // exercise 18-(a)
+    // exercise 18-(a)-(a)
     friend std::ostream& operator<<(std::ostream&, const currency&);
     friend std::istream& operator>>(std::istream&, currency&);
     public:
@@ -33,11 +33,16 @@ class currency
         {
             amount += x.amount; return *this;
         }
-        // exercise 18-(b~e)
+        // exercise 18-(a)-(b~3)
         currency operator-(const currency&) const;
         currency operator%(const currency&) const;
         currency operator*(const currency&) const;
         currency operator/(const currency&) const;
+
+        // exercise 18-(b)
+        void operator=(int);
+        void operator=(double);
+
         void output(std::ostream&) const;
     private:
         long amount;

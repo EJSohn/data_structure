@@ -8,7 +8,9 @@ int main()
     currency g, h(currency::plus, 3, 50), i, j, k;
 
     g.setValue(currency::minus, 2, 25);
-    i.setValue(-6.45);
+    i = -6.45;
+
+    cout<<"i: "<<i<<endl;
 
     j = h + g;
     cout << h <<" + "<<g<<" = "<<j<<endl;

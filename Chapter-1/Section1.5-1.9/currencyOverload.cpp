@@ -26,6 +26,14 @@ void currency::setValue(double theAmount)
         amount = (long)((theAmount + 0.001) * 100);
 }
 
+// exercise 18-(b)
+void currency::operator=(double x)
+{
+    if (x<0)
+        amount = (long) ((x - 0.001) * 100);
+    else 
+        amount = (long)((x + 0.001) * 100);
+}
 
 
 currency currency::operator+(const currency& x) const
@@ -35,7 +43,7 @@ currency currency::operator+(const currency& x) const
     return result;
 }
 
-// exercise 18-(b~e)
+// exercise 18-(a)-(b~e)
 currency currency::operator-(const currency& x) const
 {
     currency result;
@@ -77,7 +85,7 @@ void currency::output(ostream& out) const
     cout << cents;
 }
 
-// exerciese 18-(a)
+// exerciese 18-(a)-(a)
 istream& operator>>(istream& input, currency& x)
 {   
     double theAmount;
