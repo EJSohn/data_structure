@@ -34,7 +34,13 @@ int main()
     a = g.multiply(3.5);
     a.output();
     cout<<endl;
-    
+
+    // exercise 16-(e)
+
+    cout<<"divide input currency into 3.2";
+    b = g.divide(3.2);
+    b.output();
+    cout<<endl;
     return 0;
 }
 
