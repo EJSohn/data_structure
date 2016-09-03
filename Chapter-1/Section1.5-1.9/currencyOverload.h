@@ -1,11 +1,11 @@
 class currency
 {
-    friend ostream& operator<<(ostream&, const currency&);
+    friend std::ostream& operator<<(std::ostream&, const currency&);
     public:
         // constructor
         enum signType {plus, minus};
-        currency(signType theSign = plus;
-                 unsigned long theDollars = 0;
+        currency(signType theSign = plus,
+                 unsigned long theDollars = 0,
                  unsigned int theCents = 0);
         //destructor
         ~currency() {}
@@ -31,7 +31,9 @@ class currency
         {
             amount += x.amount; return *this;
         }
-        void output(ostream&) const;
+        // exercise 18-(a)
+        currency operator-(const currency&) const;
+        void output(std::ostream&) const;
     private:
         long amount;
 };
