@@ -13,10 +13,14 @@ int main()
     j = h + g;
     cout << h <<" + "<<g<<" = "<<j<<endl;
 
-    // exercise 18-(a)
+    // exercise 18(b)
     k = g - i;
     cout << g <<" - "<<i<<" = "<<k<<endl;
 
+    // exercise 18-(a)
+    currency a;
+    cin>>a;
+    cout<<a<<endl;
     return 0;
 }
 

@@ -35,11 +35,32 @@ currency currency::operator+(const currency& x) const
     return result;
 }
 
-// exercise 18-(a)
+// exercise 18-(b~e)
 currency currency::operator-(const currency& x) const
 {
     currency result;
     result.amount = amount - x.amount;
+    return result;
+}
+
+currency currency::operator%(const currency& x) const
+{
+    currency result;
+    result.amount = amount % x.amount;
+    return result;
+}
+
+currency currency::operator*(const currency& x) const
+{
+    currency result;
+    result.amount = amount * x.amount;
+    return result;
+}
+
+currency currency::operator/(const currency& x) const
+{
+    currency result;
+    result.amount = amount / x.amount;
     return result;
 }
 
@@ -54,6 +75,17 @@ void currency::output(ostream& out) const
     int cents = theAmount - dollars * 100;
     if (cents < 10) out << "0";
     cout << cents;
+}
+
+// exerciese 18-(a)
+istream& operator>>(istream& input, currency& x)
+{   
+    double theAmount;
+
+    cout<<"please enter the currency you want"<<endl;
+    input >> theAmount;
+    x.amount = theAmount*100;
+    return input;
 }
 
 ostream& operator<<(ostream& out, const currency& x)
