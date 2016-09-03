@@ -59,7 +59,7 @@ currency currency::multiply(double x) const
     a1 = dollars * 100 + cents;
     a2 = a1 * x;
 
-    if(sign==minus) {a2 = -a2; result.sign == minus; }
+    if(sign==minus) {a2 = -a2; result.sign = minus; }
     result.dollars = a2/100;
     result.cents = (a2 - result.dollars * 100)/1;
 
