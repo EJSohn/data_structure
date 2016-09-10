@@ -22,8 +22,11 @@ int main()
     return 0;
 }
 
+// it seems like this function is similar to permutation code. 
 void print_subsets(int *arr, int index, int size)
 {
+    // if variable is declared by static in recursive function,
+    // it will created once and used repeatedly. 
     static vector<int> ans;
     if(index==size)
     {
