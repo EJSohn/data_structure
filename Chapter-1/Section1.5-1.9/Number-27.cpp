@@ -1,4 +1,9 @@
 #include <iostream>
+
+// include for STL accumulate, adjacent_difference
+// inner_product, partial_sum, iota.
+#include <numeric>
+
 using namespace std;
 
 template <class T>
