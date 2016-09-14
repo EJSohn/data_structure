@@ -101,8 +101,13 @@ Chapter 1 Section1-1.5 Exercises!
     mismatch(start1, end1, start2)
 
 39 . Write C++ code for STL template function count of Exercise 33.
+
 40 . Write C++ code for STL template function fill of Exercise 34.
+
 41 . Write C++ code for STL template function inner_product of Exercise 35.
+
 42 . Write C++ code for STL template function iota of Exercise 36.
+
 43 . Write C++ code for STL template function is_sorted of Exercise 37.
+
 44 . Write C++ code for STL template function mismatch of Exercise 38.
