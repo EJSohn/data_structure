@@ -25,6 +25,7 @@ Chapter 1 Section1-1.5 Exercises!
 
 > (a) Write a recursive function to compute the Fibonacci number Fn. 
 > 
+
 > (c) Write a non-recursive function to compute the Fibonacci number Fn. Your code should compute each Fibonacci number just once.  
 
 21 . Consider the function f, which is defined in Equation 1.4. n is a non-negative integer.
@@ -65,3 +66,43 @@ Chapter 1 Section1-1.5 Exercises!
 	    else return g(n-1),n,g(n-1)
 
 > (c) Write a recursive C++ function to compute g(n).
+
+27 . Write C++ code for the three-parameter template function accumulate .
+
+28 . Write C++ code for the four-parameter template function accumulate.
+
+29 . Write C++ code for the template function copy.
+
+30 . Modify Program 1.35 so that it outputs all permutations of distinct elements. Do this by sorting the list elements into ascending order prior to generating the permutations. To sort, use the STL algorithm sort(start, end)
+
+31 . Modify Program 1.35 so that it outputs all permutations of distinct elements . Do this by first using next_permutation to generate permutations that are lexically larger than the initial permutation and then using the STL algorithm prev_permutation to generate permutations that are lexically smaller than the initial permutation.
+
+32 . Modify Program 1.35 so that it outputs all permutations of distinct elements. Do this by using the fact that when next_permutation returns the value false, the sequence[start, end) is the lexically smallest sequence. Hence, subsequent invocations of next_permutation will get you the remaining ( if any ) permutations you need.
+
+33 . Do Exercise 2 using the STL  algorithm count, which has the syntax 
+
+    cout(start, end, value)
+
+34 . Do Exercise 3 using the STL algorithm fill, which has the syntax
+
+    fill(start, end, value)
+
+35 . Do Exercise 4 using the STL algorithm inner_product, which has the syntax
+
+    inner_product(start1, end1, start2, initialValue)
+36 . Do Exercise 5 using the STL algorithm iota, which has the syntax
+
+    iota(start, end, value)
+37 . Do Exercise 6 using the STL algorithm is_sorted, which has the syntax
+
+    is_sorted(start, end)
+38 . Do Exercise 7 using the STL algorithm mismatch, which has the syntax
+
+    mismatch(start1, end1, start2)
+
+39 . Write C++ code for STL template function count of Exercise 33.
+40 . Write C++ code for STL template function fill of Exercise 34.
+41 . Write C++ code for STL template function inner_product of Exercise 35.
+42 . Write C++ code for STL template function iota of Exercise 36.
+43 . Write C++ code for STL template function is_sorted of Exercise 37.
+44 . Write C++ code for STL template function mismatch of Exercise 38.
